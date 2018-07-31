@@ -7,12 +7,14 @@ export const propTypes = {
   headers: array,
   target: string,
   separator: string,
+  quoteCharacter: string,
   filename: string,
   uFEFF: bool
 };
 
 export const defaultProps = {
   separator: ',',
+  quoteCharacter: "\"",
   filename: 'generatedBy_react-csv.csv',
   uFEFF: true
 };
