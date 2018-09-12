@@ -45,6 +45,11 @@ describe('CSVLink', () => {
      expect(wrapper.props().separator).toEqual(',');
    })
 
+    it(`has double quote as default quote character `, () => {
+     const wrapper = mount( <CSVLink {...minProps} > Click here </CSVLink>);
+     expect(wrapper.props().quoteCharacter).toEqual('"');
+   })
+
    it(`assigns a download filename`, () => {
      const filename= "persons.csv";
      const wrapper = mount( <CSVLink {...minProps} filename={filename} > here </CSVLink>);
